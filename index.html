@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
+    <div class="calculator" id="calculator">
+        <div class="header" id="calculatorHeader">
+            <span class="title">Calculator</span>
+        </div>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
         <div class="display">
             <input type="text" id="result" disabled>
         </div>
@@ -31,6 +43,7 @@
             <button onclick="appendCharacter('0')">0</button>
             <button onclick="appendCharacter('.')">.</button>
         </div>
+        <div class="resize-handle"></div>
     </div>
     <script src="script.js"></script>
 </body>
