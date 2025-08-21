@@ -95,3 +95,12 @@ function resizeElement(elmnt) {
         document.documentElement.removeEventListener('mouseup', stopDrag, false);
     }
 }
+
+// Open/close functionality
+document.getElementById('calculatorIcon').addEventListener('click', function() {
+    document.getElementById('calculator').style.display = 'block';
+});
+
+document.getElementById('closeButton').addEventListener('click', function() {
+    document.getElementById('calculator').style.display = 'none';
+});
