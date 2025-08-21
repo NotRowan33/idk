@@ -33,7 +33,7 @@ body {
     text-shadow: 1px 1px 2px black;
 }
 
-.calculator {
+.app-window {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,6 +44,26 @@ body {
     width: 320px;
     overflow: hidden;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator {
+    /* Calculator specific styles can go here if needed */
+}
+
+#notes-app {
+    width: 400px;
+    height: 300px;
+}
+
+#notes-content {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    resize: none;
 }
 
 .header {
@@ -216,4 +236,74 @@ body.dark-mode {
 
 .dark-mode .toggle-container {
     background-color: #333;
+}
+
+/* Tic Tac Toe */
+#tictactoe-app {
+    width: 300px;
+    height: 400px;
+}
+
+#tictactoe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.cell {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+#tictactoe-status {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#tictactoe-restart {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Settings */
+#settings-app {
+    width: 350px;
+    height: 250px;
+}
+
+#wallpaper-options {
+    padding: 10px;
+}
+
+#wallpaper-options p {
+    margin-top: 0;
+}
+
+#wallpaper-options img {
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-right: 10px;
+}
+
+#wallpaper-options img:hover {
+    border-color: #333;
+}
+
+/* Browser */
+#browser-app {
+    width: 800px;
+    height: 600px;
 }
